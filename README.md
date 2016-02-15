@@ -2,8 +2,8 @@
 
 Installation instructions:
 ````powershell
-git clone https://github.com/pedrofernandesfilho/poshfiles.git $env:USERPROFILE\Documents\WindowsPowerShell
-cd $env:USERPROFILE\Documents\WindowsPowerShell
+git clone https://github.com/pedrofernandesfilho/poshfiles.git $HOME\Documents\WindowsPowerShell
+cd $HOME\Documents\WindowsPowerShell
 git submodule update --init --recursive
 . $PROFILE
 ````
