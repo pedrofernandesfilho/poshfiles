@@ -3,3 +3,5 @@
 if (Test-Path "$scriptPath\Modules\posh-git\profile.example.ps1") {
     . $scriptPath\Modules\posh-git\profile.example.ps1
 }
+
+Import-Module z
