@@ -1,3 +1,7 @@
+[submodule "Modules/posh-alias"]
+	path = Modules/posh-alias
+	url = https://github.com/giggio/posh-alias.git
+
 [submodule "Modules/posh-git"]
 	path = Modules/posh-git
 	url = https://github.com/dahlbyk/posh-git.git
