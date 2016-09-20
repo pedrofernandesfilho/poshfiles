@@ -45,3 +45,4 @@ Add-Alias tag 'git tag'
 
 Add-Alias l 'ls'
 Add-Alias ll 'ls -Force'
+Add-Alias c 'clear'
