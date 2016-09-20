@@ -7,3 +7,10 @@ cd $HOME\Documents\WindowsPowerShell
 git submodule update --init --recursive
 . $PROFILE
 ````
+
+Update instructions:
+````powershell
+git pull
+git submodule update --init --recursive
+. $PROFILE
+````
