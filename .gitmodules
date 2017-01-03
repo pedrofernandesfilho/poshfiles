@@ -9,3 +9,4 @@
 [submodule "Modules/z"]
 	path = Modules/z
 	url = https://github.com/vincpa/z.git
+  ignore = dirty
