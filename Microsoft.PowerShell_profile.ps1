@@ -41,6 +41,7 @@ Add-Alias rb 'git rebase'
 Add-Alias branch 'git branch'
 Add-Alias tag 'git tag'
 Add-Alias gk 'gitk'
+Add-Alias cl 'git clone'
 
 # - Unix 
 
