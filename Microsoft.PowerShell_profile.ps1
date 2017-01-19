@@ -48,3 +48,10 @@ Add-Alias cl 'git clone'
 Add-Alias l 'ls'
 Add-Alias ll 'ls -Force'
 Add-Alias c 'clear'
+
+# - SQLLocalDB
+
+Add-Alias sld 'SqlLocalDB'
+Add-Alias sldi 'SqlLocalDB i' # info
+Add-Alias slds 'SqlLocalDB s' # start
+Add-Alias sldp 'SqlLocalDB p' # stop
