@@ -2,8 +2,9 @@
 
 # Enable posh-git
 
-if (Test-Path "$scriptPath\Modules\posh-git\profile.example.ps1") {
-    . $scriptPath\Modules\posh-git\profile.example.ps1
+if (Test-Path "$scriptPath\Modules\posh-git\src\posh-git.psd1") {
+    Import-Module "$scriptPath\Modules\posh-git\src\posh-git.psd1"
+    Start-SshAgent -Quiet
 }
 
 # z Module
