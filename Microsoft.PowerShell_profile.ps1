@@ -44,6 +44,7 @@ Add-Alias branch 'git branch'
 Add-Alias gk 'gitk'
 Add-Alias cl 'git clone'
 Add-Alias remote 'git remote'
+Add-Alias gspp 'git subtree push --prefix'
 
 # - Unix 
 
