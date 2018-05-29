@@ -58,3 +58,4 @@ Add-Alias sld 'SqlLocalDB'
 Add-Alias sldi 'SqlLocalDB i' # info
 Add-Alias slds 'SqlLocalDB s' # start
 Add-Alias sldp 'SqlLocalDB p' # stop
+Add-Alias sldv 'SqlLocalDB v' # versions
