@@ -1,17 +1,7 @@
 ﻿$scriptPath = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 
-# Enable posh-git
-
-if (Test-Path "$scriptPath\Modules\posh-git\src\posh-git.psd1") {
-    Import-Module "$scriptPath\Modules\posh-git\src\posh-git.psd1"
-    Start-SshAgent -Quiet
-}
-
-# z Module
-
+Import-Module "$scriptPath\Modules\posh-git\src\posh-git.psd1"
 Import-Module z
-
-# Chocolatey profile
 
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
@@ -61,4 +51,5 @@ Add-Alias sldp 'SqlLocalDB p' # stop
 Add-Alias sldv 'SqlLocalDB v' # versions
 
 # - Docker
+
 Add-Alias dk 'docker'
