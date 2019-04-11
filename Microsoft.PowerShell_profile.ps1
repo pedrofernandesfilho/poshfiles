@@ -1,12 +1,17 @@
 ﻿$scriptPath = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 
 Import-Module "$scriptPath\Modules\posh-git\src\posh-git.psd1"
+Import-Module oh-my-posh
 Import-Module z
 
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
+
+
+Set-Theme Honukai
+
 
 # Set Aliases
 

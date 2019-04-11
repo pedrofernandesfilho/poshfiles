@@ -10,3 +10,6 @@
 	path = Modules/z
 	url = https://github.com/vincpa/z.git
   ignore = dirty
+[submodule ".\\Modules\\oh-my-posh"]
+	path = .\\Modules\\oh-my-posh
+	url = https://github.com/JanDeDobbeleer/oh-my-posh.git
