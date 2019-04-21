@@ -9,9 +9,7 @@ if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
 
-
-Set-Theme Honukai
-
+Set-Theme Pedro2
 
 # Set Aliases
 
