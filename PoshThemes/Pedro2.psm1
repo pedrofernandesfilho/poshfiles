@@ -8,18 +8,23 @@ function Write-Theme {
         $with
     )
 
+    $prompt = Set-NewLine
+
     # user
     $user = [System.Environment]::UserName
     if (Test-NotDefaultUser($user)) {
-      #$prompt = Set-NewLine
+        # device name
+        $prompt += Write-Prompt -Object "$user @ $(Get-ComputerName) " -ForegroundColor $sl.Colors.PromptHighlightColor
+    }
 
-      $prompt += Write-Prompt -Object $user -ForegroundColor $sl.Colors.PromptHighlightColor
-      # devicename
-      $device = Get-ComputerName
-      $prompt += Write-Prompt -Object " @ $device" -ForegroundColor $sl.Colors.PromptHighlightColor
-      # date time
-      $dateTime = Get-Date -Format G
-      $prompt += Write-Prompt " [$dateTime]" -ForegroundColor $sl.Colors.PromptForegroundColor
+    # date time
+    $dateTime = Get-Date -Format G
+    $prompt += Write-Prompt "[$dateTime]" -ForegroundColor $sl.Colors.PromptForegroundColor
+
+    # write virtualenv
+    if (Test-VirtualEnv) {
+        $prompt += Write-Prompt -Object ' inside env:' -ForegroundColor $sl.Colors.PromptForegroundColor
+        $prompt += Write-Prompt -Object "$(Get-VirtualEnvName) " -ForegroundColor $themeInfo.VirtualEnvForegroundColor
     }
 
     $prompt += Set-NewLine
@@ -33,6 +38,12 @@ function Write-Theme {
     if ($gitStatus) {
         $themeInfo = Get-VcsInfo -status ($gitStatus)
         $prompt += Write-Prompt -Object " [$($themeInfo.VcInfo)]" -ForegroundColor $themeInfo.BackgroundColor
+    }
+
+    # with
+    if ($with) {
+        $prompt += Set-NewLine
+        $prompt += Write-Prompt -object "$($with.toupper()) " -backgroundcolor $sl.colors.withbackgroundcolor -foregroundcolor $sl.colors.withforegroundcolor
     }
 
     $prompt += Set-NewLine
@@ -57,3 +68,4 @@ function Write-Theme {
 $sl = $global:ThemeSettings #local settings
 $sl.GitSymbols.BranchSymbol = ''
 $sl.GitSymbols.BranchIdenticalStatusToSymbol = $GitPromptSettings.BranchIdenticalStatusSymbol.Text
+$sl.Colors.PromptHighlightColor = [ConsoleColor]::Blue
