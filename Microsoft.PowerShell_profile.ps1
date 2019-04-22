@@ -9,7 +9,24 @@ if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
 
+
+# Set oh-my-posh theme
 Set-Theme Pedro2
+
+
+# Posh-Git config prompt (test)
+<#
+$promptPrefix = '`n'
+$promptPrefix += Write-Prompt -Object "$([System.Environment]::UserName)" -ForegroundColor "Blue"
+$promptPrefix += Write-Prompt -Object " @ $([System.Environment]::MachineName)" -ForegroundColor "Blue"
+$promptPrefix += Write-Prompt -Object " [$(Get-Date -Format G)]" -ForegroundColor "Gray"
+$promptPrefix += '`n'
+
+$GitPromptSettings.DefaultPromptPrefix.Text = $promptPrefix
+
+$GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
+#>
+
 
 # Set Aliases
 
