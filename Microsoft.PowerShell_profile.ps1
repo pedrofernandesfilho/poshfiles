@@ -1,7 +1,6 @@
 ﻿$scriptPath = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 
 Import-Module "$scriptPath\Modules\posh-git\src\posh-git.psd1"
-Import-Module oh-my-posh
 Import-Module z
 
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
@@ -10,22 +9,14 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 
-# Set oh-my-posh theme
-Set-Theme Pedro2
-
-
 # Posh-Git config prompt (test)
-<#
-$promptPrefix = '`n'
-$promptPrefix += Write-Prompt -Object "$([System.Environment]::UserName)" -ForegroundColor "Blue"
+
+$promptPrefix = Write-Prompt -Object "$([System.Environment]::UserName)" -ForegroundColor "Blue"
 $promptPrefix += Write-Prompt -Object " @ $([System.Environment]::MachineName)" -ForegroundColor "Blue"
 $promptPrefix += Write-Prompt -Object " [$(Get-Date -Format G)]" -ForegroundColor "Gray"
 $promptPrefix += '`n'
-
 $GitPromptSettings.DefaultPromptPrefix.Text = $promptPrefix
-
 $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
-#>
 
 
 # Set Aliases
