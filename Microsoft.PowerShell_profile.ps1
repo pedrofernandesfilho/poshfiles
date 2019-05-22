@@ -9,12 +9,12 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 
-# Posh-Git config prompt (test)
+# Posh-Git config prompt
 
 $promptPrefix = Write-Prompt -Object "$([System.Environment]::UserName)" -ForegroundColor "Blue"
 $promptPrefix += Write-Prompt -Object " @ $([System.Environment]::MachineName)" -ForegroundColor "Blue"
-$promptPrefix += Write-Prompt -Object " [$(Get-Date -Format G)]" -ForegroundColor "Gray"
-$promptPrefix += '`n'
+$promptPrefix += Write-Prompt -Object ' [$(Get-Date -Format G)]' -ForegroundColor "Gray"
+$promptPrefix += '`n> '
 $GitPromptSettings.DefaultPromptPrefix.Text = $promptPrefix
 $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
 
