@@ -9,19 +9,38 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 
-# Posh-Git config prompt
+## Posh-Git config prompt
 
+# User Name
 $promptPrefix = Write-Prompt -Object "$([System.Environment]::UserName)" -ForegroundColor "Blue"
+# Machine Name
 $promptPrefix += Write-Prompt -Object " @ $([System.Environment]::MachineName)" -ForegroundColor "Blue"
+# Date Time
 $promptPrefix += Write-Prompt -Object ' [$(Get-Date -Format G)]' -ForegroundColor "Gray"
-$promptPrefix += '`n> '
+# Break Line
+$promptPrefix += '`n'
+
+# Set prompt prefix (first line)
 $GitPromptSettings.DefaultPromptPrefix.Text = $promptPrefix
+
+# Break Line (before prompt symbol)
 $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
 
+# Prompt Symbol
+$promptSymbol = Write-Prompt -Object "$([char]::ConvertFromUtf32(5125)) " -ForegroundColor "Blue"
 
-# Set Aliases
+# Nested Prompt Level
+if ($nestedPromptLevel > 0) {
+  $promptSymbol += "$(">" * ($nestedPromptLevel)) "
+}
 
-# - Git
+# Set prompt symbol
+$GitPromptSettings.DefaultPromptSuffix.Text = $promptSymbol
+
+
+## Set Aliases
+
+# Git
 
 function add {
     if ($args) {
@@ -47,13 +66,13 @@ Add-Alias cl 'git clone'
 Add-Alias remote 'git remote'
 Add-Alias gspushp 'git subtree push --prefix'
 
-# - Unix 
+# Unix 
 
 Add-Alias l 'ls'
 Add-Alias ll 'ls -Force'
 Add-Alias c 'clear'
 
-# - SQLLocalDB
+# SQLLocalDB
 
 Add-Alias sld 'SqlLocalDB'
 Add-Alias sldi 'SqlLocalDB i' # info
@@ -61,6 +80,6 @@ Add-Alias slds 'SqlLocalDB s' # start
 Add-Alias sldp 'SqlLocalDB p' # stop
 Add-Alias sldv 'SqlLocalDB v' # versions
 
-# - Docker
+# Docker
 
 Add-Alias dk 'docker'
