@@ -30,7 +30,7 @@ $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
 $promptSymbol = Write-Prompt -Object "$([char]::ConvertFromUtf32(5125)) " -ForegroundColor "Blue"
 
 # Nested Prompt Level
-if ($nestedPromptLevel > 0) {
+if ($nestedPromptLevel -gt 0) {
   $promptSymbol += "$(">" * ($nestedPromptLevel)) "
 }
 
