@@ -9,7 +9,7 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 
-## Posh-Git config prompt
+## PROMPT
 
 # User Name
 $promptPrefix = Write-Prompt -Object "$([System.Environment]::UserName)" -ForegroundColor "Blue"
@@ -38,33 +38,36 @@ if ($nestedPromptLevel -gt 0) {
 $GitPromptSettings.DefaultPromptSuffix.Text = $promptSymbol
 
 
-## Set Aliases
+## ALIASES
 
 # Git
 
-function add {
+function gadd {
     if ($args) {
         Invoke-Expression ( "git add " + ($args -join ' ') )
     } else {
         git add -A :/
     }
 }
-Add-Alias st 'git status'
-Add-Alias push 'git push'
-Add-Alias pull 'git pull'
-Add-Alias log 'git log'
-Add-Alias ci 'git commit'
-Add-Alias co 'git checkout'
-Add-Alias dif 'git diff'
-#Add-Alias rs 'git reset'
-Add-Alias rb 'git rebase'
-#Add-Alias fixup 'git fixup'
-Add-Alias branch 'git branch'
-#Add-Alias tag 'git tag'
+Add-Alias gbranch 'git branch'
+Add-Alias gci 'git commit'
+Add-Alias gciv 'git commit -v'
+Add-Alias gco 'git checkout'
+Add-Alias gcob 'git checkout -b'
+Add-Alias gcl 'git clone'
+Add-Alias gdif 'git diff'
+#Add-Alias gfixup 'git fixup'
 Add-Alias gk 'gitk'
-Add-Alias cl 'git clone'
-Add-Alias remote 'git remote'
+Add-Alias glog 'git log'
+Add-Alias gpull 'git pull'
+Add-Alias gpullr 'git pull -r'
+Add-Alias gpushu 'git push -u'
+Add-Alias grb 'git rebase'
+Add-Alias gremote 'git remote'
+#Add-Alias grs 'git reset'
 Add-Alias gspushp 'git subtree push --prefix'
+Add-Alias gst 'git status'
+#Add-Alias gtag 'git tag'
 
 # Unix 
 
@@ -76,10 +79,11 @@ Add-Alias c 'clear'
 
 Add-Alias sld 'SqlLocalDB'
 Add-Alias sldi 'SqlLocalDB i' # info
-Add-Alias slds 'SqlLocalDB s' # start
 Add-Alias sldp 'SqlLocalDB p' # stop
+Add-Alias slds 'SqlLocalDB s' # start
 Add-Alias sldv 'SqlLocalDB v' # versions
 
 # Docker
 
 Add-Alias dk 'docker'
+Add-Alias dkc 'docker-compose'
