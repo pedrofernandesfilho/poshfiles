@@ -69,11 +69,15 @@ Add-Alias gspushp 'git subtree push --prefix'
 Add-Alias gst 'git status'
 #Add-Alias gtag 'git tag'
 
+# Windows
+
+Add-Alias s 'start'
+
 # Unix 
 
+Add-Alias c 'clear'
 Add-Alias l 'ls'
 Add-Alias ll 'ls -Force'
-Add-Alias c 'clear'
 
 # SQLLocalDB
 
