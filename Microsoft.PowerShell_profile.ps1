@@ -50,8 +50,8 @@ function gadd {
     }
 }
 Add-Alias gbranch 'git branch'
-Add-Alias gci 'git commit'
-Add-Alias gciv 'git commit -v'
+Add-Alias gct 'git commit'
+Add-Alias gctv 'git commit -v'
 Add-Alias gco 'git checkout'
 Add-Alias gcob 'git checkout -b'
 Add-Alias gcl 'git clone'
