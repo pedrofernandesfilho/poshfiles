@@ -7,7 +7,6 @@ You may need to adjust the execution policy:
 Set-ExecutionPolicy Bypass
 ````
 
-
 ````powershell
 git clone https://github.com/pedrofernandesfilho/poshfiles.git $HOME\Documents\WindowsPowerShell
 cd $HOME\Documents\WindowsPowerShell
@@ -26,3 +25,8 @@ git submodule update --init --recursive
 ````powershell
 git submodule update --recursive --remote
 ````
+
+## Print
+
+![Windows Terminal](/print.png)<br />
+*Windows Terminal*
