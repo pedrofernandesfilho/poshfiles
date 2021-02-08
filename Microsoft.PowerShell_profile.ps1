@@ -55,9 +55,10 @@ Add-Alias gco 'git checkout'
 Add-Alias gcob 'git checkout -b'
 Add-Alias gct 'git commit'
 Add-Alias gcta 'git commit --amend'
+Add-Alias gcts 'git commit -S'
+Add-Alias gctsv 'git commit -S -v'
 Add-Alias gctv 'git commit -v'
 Add-Alias gdif 'git diff'
-#Add-Alias gfixup 'git fixup'
 Add-Alias gk 'gitk'
 Add-Alias glog 'git log'
 Add-Alias gpull 'git pull'
@@ -67,14 +68,14 @@ Add-Alias gpushf 'git push -f'
 Add-Alias gpushu 'git push -u'
 Add-Alias grb 'git rebase'
 Add-Alias gremote 'git remote'
-#Add-Alias grs 'git reset'
+Add-Alias gremotev 'git remote -v'
 Add-Alias gspushp 'git subtree push --prefix'
 Add-Alias gst 'git status'
 Add-Alias gsta 'git stash'
-#Add-Alias gtag 'git tag'
 
 # Windows
 
+Add-Alias poshadm 'Start-Process powershell -verb runas'
 Add-Alias s 'start'
 
 # Unix 
