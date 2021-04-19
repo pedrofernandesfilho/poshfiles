@@ -75,6 +75,7 @@ Add-Alias gremotev 'git remote -v'
 Add-Alias gspushp 'git subtree push --prefix'
 Add-Alias gst 'git status'
 Add-Alias gsta 'git stash'
+Add-Alias gstap 'git stash pop'
 
 # Windows
 
@@ -99,3 +100,5 @@ Add-Alias sldv 'SqlLocalDB v' # versions
 
 Add-Alias dk 'docker'
 Add-Alias dkc 'docker-compose'
+Add-Alias dkcsta 'docker-compose start'
+Add-Alias dkcstp 'docker-compose stop'
