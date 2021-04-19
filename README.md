@@ -26,7 +26,7 @@ git submodule update --init --recursive
 git submodule update --recursive --remote
 ````
 
-## Print
+## Screenshot
 
 ![Windows Terminal](/print.png)<br />
 *Windows Terminal*
