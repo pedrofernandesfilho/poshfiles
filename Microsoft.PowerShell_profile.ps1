@@ -75,6 +75,7 @@ Add-Alias gremotev 'git remote -v'
 Add-Alias gspushp 'git subtree push --prefix'
 Add-Alias gst 'git status'
 Add-Alias gsta 'git stash'
+Add-Alias gstal 'git stash list'
 Add-Alias gstap 'git stash pop'
 
 # Windows
