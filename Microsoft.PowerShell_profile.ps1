@@ -77,6 +77,7 @@ Add-Alias gst 'git status'
 Add-Alias gsta 'git stash'
 Add-Alias gstal 'git stash list'
 Add-Alias gstap 'git stash pop'
+Add-Alias gstau 'git stash -u'
 
 # Windows
 
