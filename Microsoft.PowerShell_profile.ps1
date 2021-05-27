@@ -40,6 +40,19 @@ $GitPromptSettings.DefaultPromptSuffix.Text = $promptSymbol
 
 ## ALIASES
 
+# Docker
+
+Add-Alias dk 'docker'
+Add-Alias dkc 'docker-compose'
+Add-Alias dkcsta 'docker-compose start'
+Add-Alias dkcstp 'docker-compose stop'
+
+# DOTNET
+
+Add-Alias dn 'dotnet'
+Add-Alias dnb 'dotnet build'
+Add-Alias dnr 'dotnet run'
+
 # Git
 
 function gadd {
@@ -79,16 +92,13 @@ Add-Alias gstal 'git stash list'
 Add-Alias gstap 'git stash pop'
 Add-Alias gstau 'git stash -u'
 
-# Windows
-
-Add-Alias poshadm 'Start-Process powershell -verb runas'
-Add-Alias s 'start'
-
-# Unix 
+# PowerShell
 
 Add-Alias c 'clear'
 Add-Alias l 'ls'
 Add-Alias ll 'ls -Force'
+Add-Alias poshadm 'Start-Process powershell -verb runas'
+Add-Alias s 'start'
 
 # SQLLocalDB
 
@@ -98,9 +108,3 @@ Add-Alias sldp 'SqlLocalDB p' # stop
 Add-Alias slds 'SqlLocalDB s' # start
 Add-Alias sldv 'SqlLocalDB v' # versions
 
-# Docker
-
-Add-Alias dk 'docker'
-Add-Alias dkc 'docker-compose'
-Add-Alias dkcsta 'docker-compose start'
-Add-Alias dkcstp 'docker-compose stop'
