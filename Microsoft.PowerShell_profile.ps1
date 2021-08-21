@@ -51,7 +51,11 @@ Add-Alias dkcstp 'docker-compose stop'
 
 Add-Alias dn 'dotnet'
 Add-Alias dnb 'dotnet build'
+Add-Alias dnc 'dotnet clean'
+Add-Alias dnlr 'dotnet --list-runtimes'
+Add-Alias dnls 'dotnet --list-sdks'
 Add-Alias dnr 'dotnet run'
+Add-Alias dnt 'dotnet test'
 
 # Git
 
