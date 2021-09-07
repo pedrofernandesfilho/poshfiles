@@ -52,11 +52,15 @@ Add-Alias dkis 'docker images'
 
 Add-Alias dn 'dotnet'
 Add-Alias dnb 'dotnet build'
+Add-Alias dnbni 'dotnet build --no-incremental'
 Add-Alias dnc 'dotnet clean'
+Add-Alias dni 'dotnet --info'
 Add-Alias dnlr 'dotnet --list-runtimes'
 Add-Alias dnls 'dotnet --list-sdks'
 Add-Alias dnr 'dotnet run'
+Add-Alias dnre 'dotnet restore'
 Add-Alias dnt 'dotnet test'
+Add-Alias dnv 'dotnet --version'
 
 # Git
 
@@ -105,7 +109,7 @@ Add-Alias ll 'ls -Force'
 Add-Alias poshadm 'Start-Process powershell -verb runas'
 Add-Alias s 'start'
 
-# SQLLocalDB
+# SQL Local DB
 
 Add-Alias sld 'SqlLocalDB'
 Add-Alias sldi 'SqlLocalDB i' # info

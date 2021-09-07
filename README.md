@@ -50,11 +50,15 @@ git submodule update --recursive --remote
 
 **dn** = `dotnet`<br />
 **dnb** = `dotnet build`<br />
+**dnbni** = `dotnet build --no-incremental`<br />
 **dnc** = `dotnet clean`<br />
+**dni** = `dotnet clean --info`<br />
 **dnlr** = `dotnet --list-runtimes`<br />
 **dnls** = `dotnet --list-sdks`<br />
 **dnr** = `dotnet run`<br />
+**dnre** = `dotnet restore`<br />
 **dnt** = `dotnet test`<br />
+**dnv** = `dotnet --version`<br />
 
 ### Git
 
