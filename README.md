@@ -31,6 +31,11 @@ git submodule update --recursive --remote
 ![Windows Terminal](/print.png)<br />
 *Windows Terminal*
 
+## Modules
+
+* PoshGit
+* Z
+
 ## Aliases
 
 ### Docker
