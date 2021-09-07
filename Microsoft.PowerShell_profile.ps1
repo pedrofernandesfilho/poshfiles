@@ -46,6 +46,7 @@ Add-Alias dk 'docker'
 Add-Alias dkc 'docker-compose'
 Add-Alias dkcsta 'docker-compose start'
 Add-Alias dkcstp 'docker-compose stop'
+Add-Alias dkis 'docker images'
 
 # DOTNET
 
