@@ -64,6 +64,7 @@ git submodule update --recursive --remote
 
 **gadd** = `git add`<br />
 **gbranch** = `git branch`<br />
+**gbrancha** = `git branch -a`<br />
 **gcl** = `git clone`<br />
 **gco** = `git checkout`<br />
 **gcob** = `git checkout -b`<br />

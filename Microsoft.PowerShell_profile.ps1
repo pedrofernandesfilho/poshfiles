@@ -72,6 +72,7 @@ function gadd {
     }
 }
 Add-Alias gbranch 'git branch'
+Add-Alias gbrancha 'git branch -a'
 Add-Alias gcl 'git clone'
 Add-Alias gco 'git checkout'
 Add-Alias gcob 'git checkout -b'
@@ -116,4 +117,3 @@ Add-Alias sldi 'SqlLocalDB i' # info
 Add-Alias sldp 'SqlLocalDB p' # stop
 Add-Alias slds 'SqlLocalDB s' # start
 Add-Alias sldv 'SqlLocalDB v' # versions
-
