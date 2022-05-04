@@ -45,6 +45,7 @@ git submodule update --recursive --remote
 **dkcsta** = `docker-compose start`<br />
 **dkcstp** = `docker-compose stop`<br />
 **dkis** = `docker images`<br />
+**dks** = `docker start`<br />
 
 ### DOTNET
 
