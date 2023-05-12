@@ -98,6 +98,7 @@ git submodule update --recursive --remote
 ### PowerShell
 
 **c** = `clear`<br />
+**e** = `exit`<br />
 **l** = `ls`<br />
 **ll** = `ls -Force`<br />
 **poshadm** = `Start-Process powershell -verb runas`<br />

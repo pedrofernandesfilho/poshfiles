@@ -106,6 +106,7 @@ Add-Alias gstau 'git stash -u'
 # PowerShell
 
 Add-Alias c 'clear'
+Add-Alias e 'exit'
 Add-Alias l 'ls'
 Add-Alias ll 'ls -Force'
 Add-Alias poshadm 'Start-Process powershell -verb runas'
